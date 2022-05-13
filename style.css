@@ -1,0 +1,192 @@
+*{
+    text-transform: capitalize;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* --border: 1px solid red; */
+    --primary-color:#081a37;
+    color: white;
+}
+body{
+    margin: 0;
+    background-image: url(`https://source.unsplash.com/1600x900/?landscape`); 
+}
+header{
+    height: 15vh;
+    border-bottom: 1px solid rgb(171, 168, 168);
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color)
+
+}
+header h1{
+    margin: 0;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    font-size: 2.5vw;
+}
+
+header h1  img{
+    height: 40px;
+    margin-right: 20px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    border: var(--border);
+    background-color: white;
+}
+.container{
+    background-color: var(--primary-color);
+    
+    height: auto;
+    width: 60vw;
+    margin-top: 50px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.inner-container{
+    
+   
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     border: var(--border);
+     width: 35%;
+     min-width: 250px;
+}
+
+.left form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left form label{
+    font-size: 0.8em;
+    font-weight: 800;
+}
+.input_btn{
+   width: 70%;
+   display: flex;
+   align-items: center;
+}
+.left form input{
+   width: 82%;
+   height: 25px;
+   border:  0.5px solid gray;
+   box-sizing: border-box;
+  
+  padding-left: 5px;
+  color: black;
+}
+.input_btn{
+    display: flex;
+    align-items: center;
+}
+.input_btn button{
+    height: 25px;
+    background-color: rgb(207, 200, 200);
+   
+    border: none;
+   display: flex;
+   align-items: center;
+}
+.input_btn button img{
+    height: 15px;
+}
+.input_btn button:hover{
+    background-color: #a8a9aa;
+}
+.left-footer{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#weather{
+    text-align: center;
+    margin: 0;
+}
+#left-bottom small{
+    color: #081a37;
+}
+#temp{
+    font-size: 3em;
+    margin: 0;
+}
+#location-btn{
+    border: none;
+    height: 25px;
+    background-color: var(--primary-color);
+    display: flex;
+   align-items: center;
+  
+}
+#location-btn img{
+    height: 15px
+}
+.right{
+    border: var(--border);
+    width: 60%;
+}
+#right-label{
+    text-align: center;
+    font-size: 1.8vw;
+}
+#current-city{
+    display: flex;
+    align-items: center;
+    background-color:green;
+    color:white;
+    padding-left: 5px;
+}
+@media only screen and (max-width:1250px) {
+    .left,.right{
+        width: 80%;
+       
+    }
+}
+@media only screen and (max-width:432px) {
+    .container{
+        width: 80%;
+       
+    }
+}
+@media only screen and (max-width:333px){
+    .container{
+        width: 90%;
+       
+    }
+}
+@media only screen and (max-width:1000px){
+    #h1{
+        
+       font-size: 3vw;
+    }
+    #right-label{
+        font-size: 2vw;
+    }
+}
+@media only screen and (max-width:600px){
+    #h1{
+        
+       font-size: 4vw;
+    }
+    #right-label{
+        font-size: 3vw;
+    }
+}
