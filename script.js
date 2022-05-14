@@ -50,7 +50,7 @@ $btn.addEventListener('click',async (e)=>{
     lbs1.style.color='white'
     lbs2.style.color='white'
     // console.log(data.temp,data.weather,data.icon)
-    let weatherIconUrl=`http://openweathermap.org/img/w/${data.icon}.png`
+    let weatherIconUrl=`https://openweathermap.org/img/w/${data.icon}.png`
     data.temp= (data.temp-273.15).toFixed(2)
     temp.innerText=data.temp+' \u00B0c'
     weather.innerText=data.weather
@@ -67,7 +67,7 @@ $btn.addEventListener('click',async (e)=>{
 
 const fetchLongAndLat=(city)=>(
    
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=3f5ce8a2ab3c86904ab64de2d31168c7`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=3f5ce8a2ab3c86904ab64de2d31168c7`)
     .then(res=>res.json())  //here the response returned by api is converted into json() and then again passed on as data ..using promise chaining.
     .then(data=>{
        console.log(data)
@@ -95,7 +95,7 @@ const fetchData=({lat,lon})=>(
 
 const fetchCityName=({lat,lon})=>(
 
-    fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=3f5ce8a2ab3c86904ab64de2d31168c7`)
+    fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=3f5ce8a2ab3c86904ab64de2d31168c7`)
     .then(res=>res.json())
     .then(data=>{
          console.log(data[0])
@@ -136,7 +136,7 @@ const plotChart=async(lat,lon)=>{
 
 
 const fetchForecast=(lat,lon)=>(
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3f5ce8a2ab3c86904ab64de2d31168c7`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3f5ce8a2ab3c86904ab64de2d31168c7`)
     .then(res=>res.json())
     .then(data=>{
        //console.log('forecast: ',data.list)
